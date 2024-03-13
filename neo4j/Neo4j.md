@@ -2,13 +2,18 @@
 - 데이터를 import 함에 있어 csv 파일만 가능하다.
 	- xlsx등의 기타 포맷은 지원하지 않는다. (neo4j 밖에서 특정한 처리를 통해 csv로 변경해줘야 함)
 - Neo4j Desktop에서 로컬 컴퓨터에서 원하는 디렉토리 파일을 cypher 구문으로 직접 읽어올 수는 없는 것으로 보인다. 때문에 Neo4j Desktop 프로그램 GUI상에서 먼저 세팅을 해주어야 한다.
-- 사진
+- ![image](https://github.com/DAU-FAIRDAY-TEAM6/Documents/assets/97269799/41107b07-5f54-49c6-93c4-90ddbf3fb893)
 
 
-#### 1. csv파일을 import folder에 넣기
+<br><br><br>
+
+
+### 1. csv파일을 import folder에 넣기
 - 작업하고자 하는 DBMS 인스턴스에서 [Open folder]-[Import]를 누른 후 [neo4j 설치 경로/import] 경로에 csv 파일을 업로드 해준다.
 
-#### 2. CSV 파일 LOAD
+<br><br><br>
+
+### 2. CSV 파일 LOAD
 ```
 LOAD CSV WITH HEADERS FROM 'file:///test.csv' AS row
 RETURN row;
@@ -19,21 +24,31 @@ RETURN row;
 >  위 명령어는 데이터를 저장하는 것이 아닌 단순히 읽는 명령어임.
 
 
-#### 3. CSV 파일 내의 데이터를 LOAD한 뒤 CREATE, SET하기
+<br><br><br>
+
+
+### 3. CSV 파일 내의 데이터를 LOAD한 뒤 CREATE, SET하기
 ```
 LOAD CSV WITH HEADERS FROM 'file:///products.csv' AS row CREATE (n:Product) SET n = row
 ```
 
 - 데이터를 노드로 저장하기 위해서는 CREATE, SET 구문을 추가적으로 사용해줘야 한다.
-- ![[Pasted image 20240313174819.png]]
+- ![image](https://github.com/DAU-FAIRDAY-TEAM6/Documents/assets/97269799/5bf84bbf-184e-4b92-b172-1db7d65bf715)
 
-#### 4. CREATE한 NODE들 전부 조회
+
+<br><br><br>
+
+
+### 4. CREATE한 NODE들 전부 조회
 - 조회하기 위해 MATCH 를 사용한다. sql에서 select와 동일
 ```
 MATCH (n) RETURN n
 ```
-- ![[Pasted image 20240313174907.png]]
+- ![image](https://github.com/DAU-FAIRDAY-TEAM6/Documents/assets/97269799/6632e76f-56ce-4c11-b8df-0d88a1b9434f)
 - Node와의 Relation을 연결해주기 위해선 관계를 나타내는 별도의 csv 파일이 필요하다.
+
+
+<br><br><br>
 
 
 #### 5. Relation 연결
@@ -47,10 +62,13 @@ CREATE (p1)-[:KNOWS]->(p2);
 ```
 
 - 이렇게 node와 edge의 import를 통해 다음과 같은 data를 만들어 줄 수 있다.
-- ![[Pasted image 20240313175641.png]]
+- ![image](https://github.com/DAU-FAIRDAY-TEAM6/Documents/assets/97269799/b91ac25d-9a22-4ff5-b285-b337a894b487)
 
 
-#### Python에서의 연동
+<br><br><br>
+
+
+### Python neo4j 연동
 ```
 from neo4j import GraphDatabase
 
