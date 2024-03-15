@@ -69,7 +69,7 @@ CREATE (p1)-[:KNOWS]->(p2);
 
 
 ### Python neo4j 연동
-```
+```python
 from neo4j import GraphDatabase
 
   
@@ -174,3 +174,41 @@ if __name__ == "__main__":
 
     main()
 ```
+
+<br><br><br>
+
+python에서 neo4j에 cypher 쿼리를 날리면 Text형태로 나오기 때문에 결과는 아래와 같이 나온다.
+```
+c:\Users\kimjinsu\Desktop\4학년1학기\졸업작품\connect_neo4j.py:38: DeprecationWarning: write_transaction has been renamed to execute_write
+  result = session.write_transaction(run_query, query)
+n_element_id: 3 n_name: donguk
+r_type: <Relationship element_id='5:fcb118a2-ffb6-4d13-bbbe-ebb2c5ba2aed:2' nodes=(<Node element_id='4:fcb118a2-ffb6-4d13-bbbe-ebb2c5ba2aed:0' labels=frozenset() properties={}>, <Node element_id='4:fcb118a2-ffb6-4d13-bbbe-ebb2c5ba2aed:1' labels=frozenset() properties={}>) type='KNOWS' properties={}>
+m_element_id: 4 m_name: teahee
+
+
+n_element_id: 4 n_name: teahee
+r_type: <Relationship element_id='5:fcb118a2-ffb6-4d13-bbbe-ebb2c5ba2aed:4' nodes=(<Node element_id='4:fcb118a2-ffb6-4d13-bbbe-ebb2c5ba2aed:1' labels=frozenset() properties={}>, <Node element_id='4:fcb118a2-ffb6-4d13-bbbe-ebb2c5ba2aed:5' labels=frozenset() properties={}>) type='KNOWS' properties={}>
+m_element_id: 2 m_name: bumgue
+
+
+n_element_id: 4 n_name: teahee
+r_type: <Relationship element_id='5:fcb118a2-ffb6-4d13-bbbe-ebb2c5ba2aed:3' nodes=(<Node element_id='4:fcb118a2-ffb6-4d13-bbbe-ebb2c5ba2aed:1' labels=frozenset() properties={}>, <Node element_id='4:fcb118a2-ffb6-4d13-bbbe-ebb2c5ba2aed:4' labels=frozenset() properties={}>) type='KNOWS' properties={}>
+m_element_id: 1 m_name: kimjinsu
+
+
+n_element_id: 1 n_name: kimjinsu
+r_type: <Relationship element_id='5:fcb118a2-ffb6-4d13-bbbe-ebb2c5ba2aed:0' nodes=(<Node element_id='4:fcb118a2-ffb6-4d13-bbbe-ebb2c5ba2aed:4' labels=frozenset() properties={}>, <Node element_id='4:fcb118a2-ffb6-4d13-bbbe-ebb2c5ba2aed:5' labels=frozenset() properties={}>) type='KNOWS' properties={}>
+m_element_id: 2 m_name: bumgue
+
+
+n_element_id: 2 n_name: bumgue
+r_type: <Relationship element_id='5:fcb118a2-ffb6-4d13-bbbe-ebb2c5ba2aed:1' nodes=(<Node element_id='4:fcb118a2-ffb6-4d13-bbbe-ebb2c5ba2aed:5' labels=frozenset() properties={}>, <Node element_id='4:fcb118a2-ffb6-4d13-bbbe-ebb2c5ba2aed:0' labels=frozenset() properties={}>) type='KNOWS' properties={}>
+m_element_id: 3 m_name: donguk
+```
+
+<br><br>
+
+neo4j desktop에서 본 반환 값은 아래 사진과 같다
+![image](https://github.com/DAU-FAIRDAY-TEAM6/Documents/assets/97269799/c19b2c0b-ff44-47f1-a5ba-f5813b7f5a98)
+
+
