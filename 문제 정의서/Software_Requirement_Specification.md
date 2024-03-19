@@ -19,7 +19,32 @@
 	- Classifier: 입력 데이터를 여러 범주 중 하나로 분류하는 모델이나 알고리즘입니다. 다층 퍼셉트론(MLP)은 이에 해당하는 대표적인 모델입니다.
 
 - 참조
-	- 이 문서에서 언급된 용어나 개념에 대한 참조는 필요한 경우 해당 문서 또는 논문으로 제공될 것입니다.
+	- [BPR] Steffen Rendle, Christoph Freudenthaler, Zeno Gantner, and Lars
+Schmidt-Thieme. 2009. BPR: Bayesian personalized ranking from implicit feedback.
+In Proceedings of the Twenty-Fifth Conference on Uncertainty in Artificial
+Intelligence (UAI '09). AUAI Press, Arlington, Virginia, USA, 452~461.
+	- [Distance] Mao Ye, Peifeng Yin, Wang-Chien Lee, and Dik-Lun Lee. 2011.
+Exploiting geographical influence for collaborative point-of-interest
+recommendation. In Proceedings of the 34th international ACM SIGIR conference
+on Research and development in Information Retrieval (SIGIR '11). Association for
+Computing Machinery, New York, NY, USA, 325?334.
+https://doi.org/10.1145/2009916.2009962
+	- [Review] Ramesh Baral, XiaoLong Zhu, S. S. Iyengar, and Tao Li. 2018. ReEL:
+Review Aware Explanation of Location Recommendation. In Proceedings of the
+26th Conference on User Modeling, Adaptation and Personalization (UMAP '18).
+Association for Computing Machinery, New York, NY, USA, 23?32.
+https://doi.org/10.1145/3209219.3209237
+	- [Sentence Embedding] Matteo Pagliardini, Prakhar Gupta, and Martin Jaggi. 2018.
+Unsupervised Learning of Sentence Embeddings Using Compositional n-Gram
+Features. In Proceedings of the 2018 Conference of the North American Chapter
+of the Association for Computational Linguistics: Human Language Technologies,
+Volume 1 (Long Papers), pages 528?540, New Orleans, Louisiana. Association for
+Computational Linguistics.
+	- [Visual] Ruining He and Julian McAuley. 2016. VBPR: visual Bayesian Personalized
+Ranking from implicit feedback. In Proceedings of the Thirtieth AAAI Conference
+on Artificial Intelligence (AAAI'16). AAAI Press, 144?150.
+	- [Counterfactual Learning] Li, S., Guo, D., Liu, K., Hong, R., & Xue, F. (2023). Multimodal Counterfactual Learning Network for Multimedia-based Recommendation. In SIGIR '23: Proceedings of the 46th International ACM SIGIR Conference on Research and Development in Information Retrieval (pp. 1539–1548). July 2023. https://doi.org/10.1145/3539618.3591739
+
 
 <br><br><br>
 
