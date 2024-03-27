@@ -66,7 +66,7 @@ with open('./csv_data/business.csv', 'w', newline='', encoding='UTF8') as csvfil
 
 
 ### Review 데이터
-```
+``` python
 import json
 import csv
 import time
